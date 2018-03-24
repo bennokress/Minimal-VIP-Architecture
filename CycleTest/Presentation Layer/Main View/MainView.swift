@@ -15,6 +15,8 @@ class MainViewController: VIPViewController {
     // FIXME: Add possible segues to enum Segue
     
     private var interpreter: MainInterpreter?
+        
+    @IBOutlet private(set) var counterLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +24,8 @@ class MainViewController: VIPViewController {
         // Do any additional setup after loading the view
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        interpreter?.viewWillAppear(with: setupData)
+    @IBAction private func counterButtonTapped() {
+        interpreter?.counterButtonTapped()
     }
     
     // MARK: 📱 Presentation Layer Cycle (View - Interpreter - Presenter)
@@ -47,17 +48,18 @@ protocol MainView: class {
     
     /// Makes the method from the superclass VIPViewController visible in order to pass data to a segue destination view controller.
     func setPassOnData(to passOnData: ViewSetupData?)
-    
-    /// Normally used to display the value, but used in console for demonstration purposes here.
-    func doSomething(with someBoolValue: Bool)
-    
+        
+    func updateCounterLabel(to newText: String)
+
 }
 
 // MARK: - MainView Conformance
 extension MainViewController: MainView {
-    
-    func doSomething(with someBoolValue: Bool) {
-        print(someBoolValue ? "yup" : "nope")
+        
+    func updateCounterLabel(to newText: String) {
+        DispatchQueue.main.async {
+            self.counterLabel.text = newText
+        }
     }
-    
+        
 }

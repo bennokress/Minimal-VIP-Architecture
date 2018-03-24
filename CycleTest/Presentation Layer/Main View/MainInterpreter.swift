@@ -11,10 +11,12 @@ import Foundation
 class MainInterpreterImplementation {
     
     private let presenter: MainPresenter
+    private var logic: Logic
     
     /// This initializer is called when a new MainView is created.
     init(with presenter: MainPresenter) {
         self.presenter = presenter
+        self.logic = BusinessLogicLayerShizzle()
     }
     
 }
@@ -22,16 +24,18 @@ class MainInterpreterImplementation {
 // MARK: - MainInterpreter Protocol
 protocol MainInterpreter: class {
     
-    /// Takes the necessary actions when the main view is finished loading
-    func viewWillAppear(with setupData: ViewSetupData?)
+    /// Takes the necessary actions when the counter button is tapped
+    func counterButtonTapped()
     
 }
 
 // MARK: - MainInterpreter Conformance
 extension MainInterpreterImplementation: MainInterpreter {
     
-    func viewWillAppear(with setupData: ViewSetupData?) {
-        presenter.setup(with: setupData)
+    func counterButtonTapped() {
+        logic.increaseCounterValue()
+        let newCounterValue = logic.getCounterValue()
+        presenter.updateView(with: newCounterValue)
     }
     
 }

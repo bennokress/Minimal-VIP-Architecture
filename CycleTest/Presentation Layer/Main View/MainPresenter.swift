@@ -22,17 +22,17 @@ class MainPresenterImplementation {
 // MARK: - MainPresenter Protocol
 protocol MainPresenter: class {
     
-    /// Display the provided data on the Main View
-    func setup(with setupData: ViewSetupData?)
+    /// Updates the view according to the new counter value
+    func updateView(with newCounterValue: Int)
     
 }
 
 // MARK: - MainPresenter Conformance
 extension MainPresenterImplementation: MainPresenter {
     
-    func setup(with setupData: ViewSetupData?) {
-        guard let data = setupData, case let ViewSetupData.main(someBoolValue) = data else { return }
-        view.doSomething(with: someBoolValue)
+    func updateView(with newCounterValue: Int) {
+        let newLabelText = "Button tapped \(newCounterValue) \(newCounterValue == 1 ? "time" : "times")."
+        view.updateCounterLabel(to: newLabelText)
     }
     
 }

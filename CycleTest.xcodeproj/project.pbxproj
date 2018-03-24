@@ -17,6 +17,7 @@
 		D36490692068411E00326AD6 /* VIPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36490682068411E00326AD6 /* VIPViewController.swift */; };
 		D364906D2068412600326AD6 /* ViewSetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364906B2068412600326AD6 /* ViewSetupData.swift */; };
 		D364906E2068412600326AD6 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364906C2068412600326AD6 /* Segue.swift */; };
+		D364907F2068471E00326AD6 /* BusinessLogicLayerShizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364907E2068471E00326AD6 /* BusinessLogicLayerShizzle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D36490682068411E00326AD6 /* VIPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPViewController.swift; sourceTree = "<group>"; };
 		D364906B2068412600326AD6 /* ViewSetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSetupData.swift; sourceTree = "<group>"; };
 		D364906C2068412600326AD6 /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
+		D364907E2068471E00326AD6 /* BusinessLogicLayerShizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessLogicLayerShizzle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				D3649066206840AE00326AD6 /* Presentation Layer */,
+				D364907E2068471E00326AD6 /* BusinessLogicLayerShizzle.swift */,
 				D364903E2066E1EB00326AD6 /* Assets.xcassets */,
 				D36490372066E1EB00326AD6 /* AppDelegate.swift */,
 				D364903B2066E1EB00326AD6 /* Main.storyboard */,
@@ -177,6 +180,7 @@
 			files = (
 				D364903A2066E1EB00326AD6 /* MainView.swift in Sources */,
 				D36490692068411E00326AD6 /* VIPViewController.swift in Sources */,
+				D364907F2068471E00326AD6 /* BusinessLogicLayerShizzle.swift in Sources */,
 				D36490382066E1EB00326AD6 /* AppDelegate.swift in Sources */,
 				D364904E2066E31F00326AD6 /* MainInterpreter.swift in Sources */,
 				D364906D2068412600326AD6 /* ViewSetupData.swift in Sources */,

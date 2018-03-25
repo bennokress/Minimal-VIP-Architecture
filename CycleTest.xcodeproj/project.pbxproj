@@ -12,11 +12,15 @@
 		D364903D2066E1EB00326AD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D364903B2066E1EB00326AD6 /* Main.storyboard */; };
 		D364903F2066E1EB00326AD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D364903E2066E1EB00326AD6 /* Assets.xcassets */; };
 		D36490422066E1EB00326AD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36490402066E1EB00326AD6 /* LaunchScreen.storyboard */; };
-		D364904C2066E31600326AD6 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364904B2066E31600326AD6 /* MainPresenter.swift */; };
-		D364904E2066E31F00326AD6 /* MainInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364904D2066E31F00326AD6 /* MainInterpreter.swift */; };
 		D36490692068411E00326AD6 /* VIPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36490682068411E00326AD6 /* VIPViewController.swift */; };
 		D364906D2068412600326AD6 /* ViewSetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364906B2068412600326AD6 /* ViewSetupData.swift */; };
 		D364906E2068412600326AD6 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364906C2068412600326AD6 /* Segue.swift */; };
+		D36490702068453300326AD6 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364906F2068453300326AD6 /* MainPresenter.swift */; };
+		D36490722068456100326AD6 /* MainInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36490712068456100326AD6 /* MainInterpreter.swift */; };
+		D3649078206845C100326AD6 /* SecondaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3649075206845C100326AD6 /* SecondaryView.swift */; };
+		D3649079206845C100326AD6 /* SecondaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3649076206845C100326AD6 /* SecondaryPresenter.swift */; };
+		D364907A206845C100326AD6 /* SecondaryInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3649077206845C100326AD6 /* SecondaryInterpreter.swift */; };
+		D364907D206845E300326AD6 /* BusinessLogicLayerShizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364907C206845E300326AD6 /* BusinessLogicLayerShizzle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +31,15 @@
 		D364903E2066E1EB00326AD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D36490412066E1EB00326AD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D36490432066E1EB00326AD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D364904B2066E31600326AD6 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
-		D364904D2066E31F00326AD6 /* MainInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterpreter.swift; sourceTree = "<group>"; };
 		D36490682068411E00326AD6 /* VIPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPViewController.swift; sourceTree = "<group>"; };
 		D364906B2068412600326AD6 /* ViewSetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSetupData.swift; sourceTree = "<group>"; };
 		D364906C2068412600326AD6 /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
+		D364906F2068453300326AD6 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		D36490712068456100326AD6 /* MainInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterpreter.swift; sourceTree = "<group>"; };
+		D3649075206845C100326AD6 /* SecondaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondaryView.swift; sourceTree = "<group>"; };
+		D3649076206845C100326AD6 /* SecondaryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondaryPresenter.swift; sourceTree = "<group>"; };
+		D3649077206845C100326AD6 /* SecondaryInterpreter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondaryInterpreter.swift; sourceTree = "<group>"; };
+		D364907C206845E300326AD6 /* BusinessLogicLayerShizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessLogicLayerShizzle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				D3649066206840AE00326AD6 /* Presentation Layer */,
+				D364907B206845E300326AD6 /* Business Logic Layer */,
 				D364903E2066E1EB00326AD6 /* Assets.xcassets */,
 				D36490372066E1EB00326AD6 /* AppDelegate.swift */,
 				D364903B2066E1EB00326AD6 /* Main.storyboard */,
@@ -80,6 +89,7 @@
 				D36490682068411E00326AD6 /* VIPViewController.swift */,
 				D364906A2068412600326AD6 /* Enums */,
 				D3649067206840BC00326AD6 /* Main View */,
+				D3649074206845C100326AD6 /* Secondary View */,
 			);
 			path = "Presentation Layer";
 			sourceTree = "<group>";
@@ -88,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				D36490392066E1EB00326AD6 /* MainView.swift */,
-				D364904D2066E31F00326AD6 /* MainInterpreter.swift */,
-				D364904B2066E31600326AD6 /* MainPresenter.swift */,
+				D36490712068456100326AD6 /* MainInterpreter.swift */,
+				D364906F2068453300326AD6 /* MainPresenter.swift */,
 			);
 			path = "Main View";
 			sourceTree = "<group>";
@@ -101,6 +111,24 @@
 				D364906C2068412600326AD6 /* Segue.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		D3649074206845C100326AD6 /* Secondary View */ = {
+			isa = PBXGroup;
+			children = (
+				D3649075206845C100326AD6 /* SecondaryView.swift */,
+				D3649076206845C100326AD6 /* SecondaryPresenter.swift */,
+				D3649077206845C100326AD6 /* SecondaryInterpreter.swift */,
+			);
+			path = "Secondary View";
+			sourceTree = "<group>";
+		};
+		D364907B206845E300326AD6 /* Business Logic Layer */ = {
+			isa = PBXGroup;
+			children = (
+				D364907C206845E300326AD6 /* BusinessLogicLayerShizzle.swift */,
+			);
+			path = "Business Logic Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,13 +203,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36490722068456100326AD6 /* MainInterpreter.swift in Sources */,
+				D3649078206845C100326AD6 /* SecondaryView.swift in Sources */,
 				D364903A2066E1EB00326AD6 /* MainView.swift in Sources */,
+				D364907D206845E300326AD6 /* BusinessLogicLayerShizzle.swift in Sources */,
+				D364907A206845C100326AD6 /* SecondaryInterpreter.swift in Sources */,
+				D36490702068453300326AD6 /* MainPresenter.swift in Sources */,
 				D36490692068411E00326AD6 /* VIPViewController.swift in Sources */,
 				D36490382066E1EB00326AD6 /* AppDelegate.swift in Sources */,
-				D364904E2066E31F00326AD6 /* MainInterpreter.swift in Sources */,
+				D3649079206845C100326AD6 /* SecondaryPresenter.swift in Sources */,
 				D364906D2068412600326AD6 /* ViewSetupData.swift in Sources */,
 				D364906E2068412600326AD6 /* Segue.swift in Sources */,
-				D364904C2066E31600326AD6 /* MainPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

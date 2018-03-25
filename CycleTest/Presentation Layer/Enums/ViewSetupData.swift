@@ -10,6 +10,7 @@ import Foundation
 
 enum ViewSetupData {
     
-    case main(someBoolValue: Bool)
+    case main(alreadyVisitedSecondary: Bool)
+    case secondary(visitCount: Int)
     
 }

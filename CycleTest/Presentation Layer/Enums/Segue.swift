@@ -14,7 +14,7 @@ enum Segue: String {
     // NOTE: They have to be identically named to the identifier of the UIStoryboardSegue they represent!
     
     // MARK: Normal Segues
-    case mainToSecond
+    case mainToSecondary
     
     // MARK: Unwind Segues
     case unwindToMain

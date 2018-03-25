@@ -16,6 +16,8 @@ class MainViewController: VIPViewController {
     
     private var interpreter: MainInterpreter?
     
+    @IBOutlet private(set) var visitSecondaryCounterLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeVIP()
@@ -25,6 +27,14 @@ class MainViewController: VIPViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         interpreter?.viewWillAppear(with: setupData)
+    }
+    
+    deinit {
+        print("🛑 Main View")
+    }
+    
+    @IBAction private func switchViewButtonTapped() {
+        interpreter?.switchViewButtonTapped()
     }
     
     // MARK: 📱 Presentation Layer Cycle (View - Interpreter - Presenter)
@@ -48,16 +58,25 @@ protocol MainView: class {
     /// Makes the method from the superclass VIPViewController visible in order to pass data to a segue destination view controller.
     func setPassOnData(to passOnData: ViewSetupData?)
     
-    /// Normally used to display the value, but used in console for demonstration purposes here.
-    func doSomething(with someBoolValue: Bool)
+    /// Set visit secondary counter label text
+    func setVisitSecondaryCounterLabelText(to newLabelText: String)
+    
+    /// Performs a segue
+    func perform(_ segue: Segue)
     
 }
 
 // MARK: - MainView Conformance
 extension MainViewController: MainView {
     
-    func doSomething(with someBoolValue: Bool) {
-        print(someBoolValue ? "yup" : "nope")
+    func setVisitSecondaryCounterLabelText(to newLabelText: String) {
+        DispatchQueue.main.async {
+            self.visitSecondaryCounterLabel.text = newLabelText
+        }
+    }
+    
+    func perform(_ segue: Segue) {
+        segue.perform(from: self)
     }
     
 }

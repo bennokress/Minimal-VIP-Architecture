@@ -14,7 +14,12 @@ class MainPresenterImplementation {
     
     /// This initializer is called when a new MainView is created.
     init(for view: MainView) {
+        print("✅ Main Presenter")
         self.view = view
+    }
+    
+    deinit {
+        print("🛑 Main Presenter")
     }
     
 }
@@ -25,14 +30,25 @@ protocol MainPresenter: class {
     /// Display the provided data on the Main View
     func setup(with setupData: ViewSetupData?)
     
+    /// Perform Segue to the Secondary View and provide it with some data
+    func goToSecondaryViewWithData(counter: Int)
+    
 }
 
 // MARK: - MainPresenter Conformance
 extension MainPresenterImplementation: MainPresenter {
     
     func setup(with setupData: ViewSetupData?) {
-        guard let data = setupData, case let ViewSetupData.main(someBoolValue) = data else { return }
-        view.doSomething(with: someBoolValue)
+        guard let data = setupData, case let ViewSetupData.main(alreadyVisitedSecondary) = data else { return }
+        let newText = alreadyVisitedSecondary ? "Tap the Button again" : "Tap the Button to go to next View"
+        view.setVisitSecondaryCounterLabelText(to: newText)
+    }
+    
+    func goToSecondaryViewWithData(counter: Int) {
+        let secondaryViewData = ViewSetupData.secondary(visitCount: counter)
+        view.setPassOnData(to: secondaryViewData)
+        view.perform(Segue.mainToSecondary)
     }
     
 }
+

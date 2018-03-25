@@ -20,11 +20,18 @@ class MainInterpreterImplementation {
 }
 
 // MARK: - MainInterpreter Protocol
-protocol MainInterpreter {
+protocol MainInterpreter: class {
+    
+    /// Takes the necessary actions when the main view is finished loading
+    func viewWillAppear(with setupData: ViewSetupData?)
     
 }
 
 // MARK: - MainInterpreter Conformance
 extension MainInterpreterImplementation: MainInterpreter {
+    
+    func viewWillAppear(with setupData: ViewSetupData?) {
+        presenter.setup(with: setupData)
+    }
     
 }

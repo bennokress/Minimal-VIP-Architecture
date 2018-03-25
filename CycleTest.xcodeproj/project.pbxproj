@@ -14,6 +14,9 @@
 		D36490422066E1EB00326AD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36490402066E1EB00326AD6 /* LaunchScreen.storyboard */; };
 		D364904C2066E31600326AD6 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364904B2066E31600326AD6 /* MainPresenter.swift */; };
 		D364904E2066E31F00326AD6 /* MainInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364904D2066E31F00326AD6 /* MainInterpreter.swift */; };
+		D36490692068411E00326AD6 /* VIPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36490682068411E00326AD6 /* VIPViewController.swift */; };
+		D364906D2068412600326AD6 /* ViewSetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364906B2068412600326AD6 /* ViewSetupData.swift */; };
+		D364906E2068412600326AD6 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364906C2068412600326AD6 /* Segue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		D36490432066E1EB00326AD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D364904B2066E31600326AD6 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		D364904D2066E31F00326AD6 /* MainInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterpreter.swift; sourceTree = "<group>"; };
+		D36490682068411E00326AD6 /* VIPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPViewController.swift; sourceTree = "<group>"; };
+		D364906B2068412600326AD6 /* ViewSetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSetupData.swift; sourceTree = "<group>"; };
+		D364906C2068412600326AD6 /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +64,7 @@
 		D36490362066E1EB00326AD6 /* CycleTest */ = {
 			isa = PBXGroup;
 			children = (
-				D36490392066E1EB00326AD6 /* MainView.swift */,
-				D364904D2066E31F00326AD6 /* MainInterpreter.swift */,
-				D364904B2066E31600326AD6 /* MainPresenter.swift */,
+				D3649066206840AE00326AD6 /* Presentation Layer */,
 				D364903E2066E1EB00326AD6 /* Assets.xcassets */,
 				D36490372066E1EB00326AD6 /* AppDelegate.swift */,
 				D364903B2066E1EB00326AD6 /* Main.storyboard */,
@@ -68,6 +72,35 @@
 				D36490432066E1EB00326AD6 /* Info.plist */,
 			);
 			path = CycleTest;
+			sourceTree = "<group>";
+		};
+		D3649066206840AE00326AD6 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				D36490682068411E00326AD6 /* VIPViewController.swift */,
+				D364906A2068412600326AD6 /* Enums */,
+				D3649067206840BC00326AD6 /* Main View */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		D3649067206840BC00326AD6 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				D36490392066E1EB00326AD6 /* MainView.swift */,
+				D364904D2066E31F00326AD6 /* MainInterpreter.swift */,
+				D364904B2066E31600326AD6 /* MainPresenter.swift */,
+			);
+			path = "Main View";
+			sourceTree = "<group>";
+		};
+		D364906A2068412600326AD6 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D364906B2068412600326AD6 /* ViewSetupData.swift */,
+				D364906C2068412600326AD6 /* Segue.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +176,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D364903A2066E1EB00326AD6 /* MainView.swift in Sources */,
+				D36490692068411E00326AD6 /* VIPViewController.swift in Sources */,
 				D36490382066E1EB00326AD6 /* AppDelegate.swift in Sources */,
 				D364904E2066E31F00326AD6 /* MainInterpreter.swift in Sources */,
+				D364906D2068412600326AD6 /* ViewSetupData.swift in Sources */,
+				D364906E2068412600326AD6 /* Segue.swift in Sources */,
 				D364904C2066E31600326AD6 /* MainPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

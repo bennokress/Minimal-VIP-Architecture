@@ -12,27 +12,42 @@ class MainPresenterImplementation {
     
     private unowned var view: MainView
     
-    /// This initializer is called when a new MainView is created.
     init(for view: MainView) {
         self.view = view
     }
     
 }
 
-// MARK: - MainPresenter Protocol
+// MARK: - VIP Cycle
+// --> Separation of View, Interpreter and Presenter (see https://github.com/bennokress/Minimal-VIP-Architecture)
+
 protocol MainPresenter: class {
     
-    /// Display the provided data on the Main View
-    func setup(with setupData: ViewSetupData?)
+    /// Populates the GamesView with data.
+    /// - Parameter setupData: [Optional] Data needed to populate the view. Set by the preceeding view controller.
+    func setup(with setupData: VIPViewSetupData?)
+    
+    // Function naming here could describe what to do in a view without concrete implementation details
+    // * updateXY(with …)
+    // * display(_ xy)
+    // * concludeYZ()
+    // * …
     
 }
 
-// MARK: - MainPresenter Conformance
 extension MainPresenterImplementation: MainPresenter {
     
-    func setup(with setupData: ViewSetupData?) {
-        guard let data = setupData, case let ViewSetupData.main(someBoolValue) = data else { return }
+    func setup(with setupData: VIPViewSetupData?) {
+        guard let data = setupData, case let VIPViewSetupData.main(someBoolValue) = data else { return }
         view.doSomething(with: someBoolValue)
     }
+    
+}
+
+// MARK: - Private Helpers
+
+extension MainPresenterImplementation {
+    
+    // private functions …
     
 }

@@ -1,5 +1,5 @@
 //
-//  ViewSetupData.swift
+//  VIPViewSetupData.swift
 //  CycleTest
 //
 //  Created by Benno Kress on 25.03.18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ViewSetupData {
+enum VIPViewSetupData {
     
     case main(someBoolValue: Bool)
     

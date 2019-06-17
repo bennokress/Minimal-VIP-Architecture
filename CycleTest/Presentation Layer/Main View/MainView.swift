@@ -10,50 +10,78 @@ import UIKit
 
 class MainViewController: VIPViewController {
     
-    // Those comments will be added to the template:
-    // FIXME: Add [name with lowercase first character] to enum ViewSetupData
-    // FIXME: Add possible segues to enum Segue
-    
     private var interpreter: MainInterpreter?
+    
+    // Data
+    // … data for the view (ideally set by the presenter at some point)
+    
+    // View Components
+    // … UIViews, UIControllers and other UI components
+    
+    // View State
+    // … some things like isSearchActive or computed properties relying on data above
+    
+}
+
+// MARK: - View Lifecycle
+
+extension MainViewController {
+    
+    override func loadView() {
+        super.loadView()
+        initializeVIP()
+        setupView()
+        interpreter?.viewIsLoading(with: setupData)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeVIP()
-        // Do any additional setup after loading the view
+        // setupConstraints()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        interpreter?.viewWillAppear(with: setupData)
+}
+
+// MARK: - View Setup
+
+extension MainViewController {
+    
+    private func setupView() {
+        view.backgroundColor = .white
+        // setup table view, navigation bar, etc.
     }
     
-    // MARK: 📱 Presentation Layer Cycle (View - Interpreter - Presenter)
+}
+
+// MARK: - Private Helpers
+
+extension MainViewController {
     
-    /// Initializes corresponding Interpreter and Presenter
+    
+    
+}
+
+// MARK: - VIP Cycle
+// --> Separation of View, Interpreter and Presenter (see https://github.com/bennokress/Minimal-VIP-Architecture)
+
+extension MainViewController {
+    
     private func initializeVIP() {
         let presenter = MainPresenterImplementation(for: self as MainView)
         self.interpreter = MainInterpreterImplementation(with: presenter)
-    }
-    
-    /// Unwind Segue Setup
-    @IBAction func unwindToMainView(sender: UIStoryboardSegue) {
-        Segue.unwindToMain.prepare(from: sender, to: self as VIPViewController)
     }
 
 }
 
 // MARK: - MainView Protocol
+// --> Every action provided to the Presenter
+
 protocol MainView: class {
-    
-    /// Makes the method from the superclass VIPViewController visible in order to pass data to a segue destination view controller.
-    func setPassOnData(to passOnData: ViewSetupData?)
     
     /// Normally used to display the value, but used in console for demonstration purposes here.
     func doSomething(with someBoolValue: Bool)
     
 }
 
-// MARK: - MainView Conformance
 extension MainViewController: MainView {
     
     func doSomething(with someBoolValue: Bool) {

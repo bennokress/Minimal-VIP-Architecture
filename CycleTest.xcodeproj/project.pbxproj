@@ -9,29 +9,25 @@
 /* Begin PBXBuildFile section */
 		D36490382066E1EB00326AD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36490372066E1EB00326AD6 /* AppDelegate.swift */; };
 		D364903A2066E1EB00326AD6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36490392066E1EB00326AD6 /* MainView.swift */; };
-		D364903D2066E1EB00326AD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D364903B2066E1EB00326AD6 /* Main.storyboard */; };
 		D364903F2066E1EB00326AD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D364903E2066E1EB00326AD6 /* Assets.xcassets */; };
 		D36490422066E1EB00326AD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36490402066E1EB00326AD6 /* LaunchScreen.storyboard */; };
 		D364904C2066E31600326AD6 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364904B2066E31600326AD6 /* MainPresenter.swift */; };
 		D364904E2066E31F00326AD6 /* MainInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364904D2066E31F00326AD6 /* MainInterpreter.swift */; };
 		D36490692068411E00326AD6 /* VIPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36490682068411E00326AD6 /* VIPViewController.swift */; };
-		D364906D2068412600326AD6 /* ViewSetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364906B2068412600326AD6 /* ViewSetupData.swift */; };
-		D364906E2068412600326AD6 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364906C2068412600326AD6 /* Segue.swift */; };
+		D364906D2068412600326AD6 /* VIPViewSetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364906B2068412600326AD6 /* VIPViewSetupData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D36490342066E1EB00326AD6 /* CycleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CycleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36490372066E1EB00326AD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D36490392066E1EB00326AD6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		D364903C2066E1EB00326AD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D364903E2066E1EB00326AD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D36490412066E1EB00326AD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D36490432066E1EB00326AD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D364904B2066E31600326AD6 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		D364904D2066E31F00326AD6 /* MainInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterpreter.swift; sourceTree = "<group>"; };
 		D36490682068411E00326AD6 /* VIPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPViewController.swift; sourceTree = "<group>"; };
-		D364906B2068412600326AD6 /* ViewSetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSetupData.swift; sourceTree = "<group>"; };
-		D364906C2068412600326AD6 /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
+		D364906B2068412600326AD6 /* VIPViewSetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPViewSetupData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +63,6 @@
 				D3649066206840AE00326AD6 /* Presentation Layer */,
 				D364903E2066E1EB00326AD6 /* Assets.xcassets */,
 				D36490372066E1EB00326AD6 /* AppDelegate.swift */,
-				D364903B2066E1EB00326AD6 /* Main.storyboard */,
 				D36490402066E1EB00326AD6 /* LaunchScreen.storyboard */,
 				D36490432066E1EB00326AD6 /* Info.plist */,
 			);
@@ -97,8 +92,7 @@
 		D364906A2068412600326AD6 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				D364906B2068412600326AD6 /* ViewSetupData.swift */,
-				D364906C2068412600326AD6 /* Segue.swift */,
+				D364906B2068412600326AD6 /* VIPViewSetupData.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -130,11 +124,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = bennokress;
 				TargetAttributes = {
 					D36490332066E1EB00326AD6 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1100;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -164,7 +159,6 @@
 			files = (
 				D36490422066E1EB00326AD6 /* LaunchScreen.storyboard in Resources */,
 				D364903F2066E1EB00326AD6 /* Assets.xcassets in Resources */,
-				D364903D2066E1EB00326AD6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,8 +173,7 @@
 				D36490692068411E00326AD6 /* VIPViewController.swift in Sources */,
 				D36490382066E1EB00326AD6 /* AppDelegate.swift in Sources */,
 				D364904E2066E31F00326AD6 /* MainInterpreter.swift in Sources */,
-				D364906D2068412600326AD6 /* ViewSetupData.swift in Sources */,
-				D364906E2068412600326AD6 /* Segue.swift in Sources */,
+				D364906D2068412600326AD6 /* VIPViewSetupData.swift in Sources */,
 				D364904C2066E31600326AD6 /* MainPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,14 +181,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D364903B2066E1EB00326AD6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D364903C2066E1EB00326AD6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D36490402066E1EB00326AD6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -221,6 +206,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -228,6 +214,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -278,6 +265,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -285,6 +273,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -324,7 +313,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bennokress.CycleTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -339,7 +328,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bennokress.CycleTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

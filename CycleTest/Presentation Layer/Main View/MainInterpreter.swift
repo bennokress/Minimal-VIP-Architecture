@@ -12,26 +12,50 @@ class MainInterpreterImplementation {
     
     private let presenter: MainPresenter
     
-    /// This initializer is called when a new MainView is created.
     init(with presenter: MainPresenter) {
         self.presenter = presenter
     }
     
 }
 
-// MARK: - MainInterpreter Protocol
+// MARK: - VIP Cycle
+// --> Separation of View, Interpreter and Presenter (see https://github.com/bennokress/Minimal-VIP-Architecture)
+
 protocol MainInterpreter: class {
     
-    /// Takes the necessary actions when the main view is finished loading
-    func viewWillAppear(with setupData: ViewSetupData?)
+    /// Takes actions when the GamesView is loading.
+    /// - Parameter setupData: [Optional] Data needed to populate the view. Set by the preceeding view controller.
+    func viewIsLoading(with setupData: VIPViewSetupData?)
+    
+    // Function naming here could be …
+    // * func view…     --> viewIsLoading(), viewDidAppear()
+    // * func user…     --> userSearched(for …), userTappedXY()
+    // * func delegate… --> delegateWasNotifiedAboutXY()
     
 }
 
-// MARK: - MainInterpreter Conformance
 extension MainInterpreterImplementation: MainInterpreter {
     
-    func viewWillAppear(with setupData: ViewSetupData?) {
+    // MARK: View Actions
+    
+    func viewIsLoading(with setupData: VIPViewSetupData?) {
         presenter.setup(with: setupData)
     }
+    
+    // MARK: User Actions
+    
+    // …
+    
+    // MARK: Delegate Actions
+    
+    // …
+    
+}
+
+// MARK: - Private Helpers
+
+extension MainInterpreterImplementation {
+    
+    // private functions …
     
 }

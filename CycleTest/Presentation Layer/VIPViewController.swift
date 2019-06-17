@@ -10,21 +10,10 @@ import UIKit
 
 class VIPViewController: UIViewController {
     
-    private(set) var setupData: ViewSetupData? = nil
-    private(set) var passOnData: ViewSetupData? = nil
+    private(set) var setupData: VIPViewSetupData? = nil
     
-    func setSetupData(to setupData: ViewSetupData?) {
+    func setup(with setupData: VIPViewSetupData?) {
         self.setupData = setupData
-    }
-    
-    func setPassOnData(to passOnData: ViewSetupData?) {
-        self.passOnData = passOnData
-    }
-    
-    /// Passes the data in passOnData to the next VIPViewController
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let segueIdentifier = segue.identifier, let pendingSegue = Segue(rawValue: segueIdentifier) else { return }
-        pendingSegue.prepare(for: segue, with: passOnData)
     }
     
 }
